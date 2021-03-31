@@ -1,0 +1,236 @@
+// ------------------------------------------------------------
+//  CONTAINER
+// ------------------------------------------------------------
+
+body {
+	@include flex-center-column;
+	background: $blue;
+}
+
+.background {
+	background: $white;
+	box-shadow: 0px 0px 30px 5px hsla(229deg, 31%, 21%, 0.2);
+	z-index: 0;
+}
+
+.container {
+	width: 100vw;
+	min-width: 320px;
+	max-width: 1440px;
+}
+
+// ------------------------------------------------------------
+//  HEADER
+// ------------------------------------------------------------
+
+.header {
+	@include flex-center-row;
+	margin: 0 1.8rem;
+	padding: 2.2rem 0 0 0;
+	justify-content: space-between;
+	margin-bottom: 4rem;
+
+	@include media-xl {
+		margin: 0;
+		padding: 2.67rem 9.17rem 6rem 9.17rem;
+	}
+}
+
+.main-logo {
+	margin-right: auto;
+	z-index: 3;
+
+	@include media-xl {
+		margin-right: 0;
+	}
+}
+
+.main-logo__image {
+	@include flex-center-row;
+}
+
+// ------------------------------------------------------------
+//  HERO
+// ------------------------------------------------------------
+
+.hero {
+	@include flex-center-column;
+	margin-bottom: 8rem;
+	min-width: 12rem;
+	overflow: hidden;
+
+	@include media-xl {
+		flex-direction: row;
+		align-items: center;
+		padding: 0 5.06rem 0 9.17rem;
+	}
+}
+
+.hero__image {
+	max-width: 36.11rem;
+	height: auto;
+}
+
+.hero__background {
+	position: relative;
+	margin-bottom: 3.33rem;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 1200px;
+		height: 80%;
+		bottom: -15px;
+		left: 200px;
+		z-index: -1;
+		border-radius: 300px;
+		background: $blue;
+	}
+
+	@include media-xl {
+		order: 1;
+	}
+}
+
+.hero__header {
+	@include flex-center-column;
+	margin: 0 1.8rem;
+
+	@include media-xl {
+		align-items: flex-start;
+		text-align: left;
+		width: 30rem;
+		align-self: center;
+		padding-bottom: 4rem;
+		margin: 0;
+	}
+}
+
+.hero__text {
+	margin: 0 auto 1.8rem auto;
+	max-width: 24.7rem;
+
+	@include media-xl {
+		margin: 0 0 1.8rem 0;
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.hero__buttons {
+	@include flex-center-row;
+	justify-content: space-between;
+}
+
+// ------------------------------------------------------------
+//  FEATURES
+// ------------------------------------------------------------
+
+.features {
+	margin-bottom: 8rem;
+}
+
+.features__header {
+	margin: 0 1.8rem 2.2rem 1.8rem;
+
+	@include media-xl {
+		max-resolution: 0 0 2.2rem 0;
+	}
+}
+
+.features__text {
+	margin: 0 auto;
+	max-width: 30rem;
+}
+
+// ------------------------------------------------------------
+//  DOWNLOAD
+// ------------------------------------------------------------
+
+.download {
+	margin: 0 1.8rem;
+	margin-bottom: 8rem;
+}
+
+.download__header {
+	margin: 0 auto 2.2rem auto;
+}
+
+.download__text {
+	margin: 0 auto;
+	max-width: 25rem;
+}
+
+// ------------------------------------------------------------
+//  FAQ
+// ------------------------------------------------------------
+
+.faq {
+	padding: 0 1.8rem;
+	max-width: 30rem;
+	margin: 5rem auto 0 auto;
+	margin-bottom: 8rem;
+}
+
+.faq__header {
+	margin-bottom: 3.5rem;
+}
+
+.faq__text {
+	margin: 0 auto;
+}
+
+// ------------------------------------------------------------
+//  CTA
+// ------------------------------------------------------------
+
+.cta {
+	padding: 3.33rem 1.8rem 0 1.8rem;
+	background: $blue;
+}
+
+.cta__text {
+	font-weight: $bold;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	margin-bottom: 0.7rem;
+	color: $white;
+}
+
+.cta__heading {
+	max-width: 23.5rem;
+	margin: 0 auto 1.8rem auto;
+	line-height: 1.56rem;
+	color: $white;
+
+	@include media-xl {
+		line-height: 2.22rem;
+	}
+}
+
+// ------------------------------------------------------------
+//  FOOTER
+// ------------------------------------------------------------
+
+.footer {
+	@include flex-center-column;
+	padding: 2.2rem 1.8rem 0 1.8rem;
+	background: $dark_blue;
+	width: 100%;
+
+	@include media-xl {
+		height: 4.11rem;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 0 9.17rem;
+	}
+}
+
+.footer-logo {
+	margin: 0 auto 2.2rem auto;
+
+	@include media-xl {
+		margin: 0;
+	}
+}

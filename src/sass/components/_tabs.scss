@@ -1,0 +1,135 @@
+// ------------------------------------------------------------
+//  TABS
+// ------------------------------------------------------------
+
+.tabs {
+	@include flex-center-column;
+	justify-content: center;
+}
+
+.tab {
+	@include flex-center-column;
+	width: 100%;
+	overflow: hidden;
+
+	@include media-xl {
+		padding: 0 9.17rem;
+		flex-direction: row;
+		align-items: flex-start;
+		align-self: flex-start;
+	}
+}
+
+[data-tab-content] {
+	display: none;
+
+	&.active {
+		display: flex;
+	}
+}
+
+.nav-tab {
+	margin: 0 1.8rem 4rem 1.8rem;
+}
+
+.tab__background {
+	position: relative;
+	margin-bottom: 2rem;
+	max-width: 32.22rem;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 1200px;
+		height: 80%;
+		bottom: -35px;
+		right: 90px;
+		z-index: -1;
+		border-radius: 300px;
+		background: $blue;
+	}
+}
+
+.tab__image {
+	width: calc(100% - 1.8rem);
+	object-fit: contain;
+}
+
+.tab__article {
+	margin: 3rem 1.8rem 0 1.8rem;
+
+	@include media-xl {
+		margin: 0 1.8rem 0 6rem;
+		padding-top: 3rem;
+		text-align: left;
+		align-self: flex-start;
+	}
+}
+
+.tab__text {
+	margin: 0 auto 0.9rem auto;
+	max-width: 24.7rem;
+
+	@include media-xl {
+		margin-bottom: 1.78rem;
+	}
+}
+
+.nav-tab__list {
+	@include media-xl {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.nav-tab__list:first-child {
+	border-top: 1px solid hsla(229deg, 31%, 21%, 0.15);
+	margin: 0 auto;
+	max-width: 40.56rem;
+
+	@include media-xl {
+		border: none;
+	}
+}
+
+.nav-tab__link {
+	position: relative;
+	display: inline-block;
+	font-size: 0.89rem;
+	color: hsla(229deg, 31%, 21%, 0.7);
+	margin-top: 1.11rem;
+	width: 100%;
+	padding-bottom: 1.11rem;
+	border-bottom: 1px solid hsla(229deg, 31%, 21%, 0.15);
+	transition: $transition_ease-out;
+
+	&.active {
+		color: hsla(229deg, 31%, 21%, 1);
+	}
+
+	&:hover {
+		color: $red;
+	}
+
+	&.active:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -4rem;
+		height: 4px;
+		width: 7.94rem;
+		background: $red;
+	}
+
+	@include media-xl {
+		width: 13.5rem;
+		padding-bottom: 2rem;
+
+		&.active:after {
+			width: 100%;
+			left: 0;
+			margin: 0;
+		}
+	}
+}

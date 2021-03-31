@@ -1,0 +1,21 @@
+// Primary Colors
+$blue: hsl(231deg, 69%, 60%);
+$red: hsl(0deg, 94%, 66%);
+
+// Neutral Colors
+$white: hsl(0deg, 0%, 100%);
+$light_gray: hsl(0deg, 0%, 97%);
+$gray: hsl(229deg, 8%, 60%);
+$dark_blue: hsl(229deg, 31%, 21%);
+$dark_blue--opacity: hsla(229deg, 31%, 21%, 0.75);
+
+// Box Shadow
+$box_shadow--light: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
+$box_shadow--heavy: 0px 10px 20px -5px rgba(73, 93, 207, 0.2);
+
+// Transition
+$transition_ease-out: all 0.3s ease-out;
+
+// Font weight
+$medium: 400;
+$bold: 500;

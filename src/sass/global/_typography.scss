@@ -1,0 +1,60 @@
+html {
+	font-size: 18px;
+	font-family: 'Rubik', sans-serif;
+}
+
+body {
+	text-align: center;
+}
+
+h1,
+h2,
+h3 {
+	color: $dark_blue;
+}
+
+h1 {
+	font-size: 1.67rem;
+	font-weight: $bold;
+	line-height: 2.22rem;
+	margin-bottom: 0.89rem;
+
+	@include media-xl {
+		font-size: 2.7rem;
+		line-height: 2.9rem;
+	}
+}
+
+h2 {
+	font-size: 1.33rem;
+	font-weight: $bold;
+	line-height: 2.89rem;
+	margin-bottom: 0.7rem;
+
+	@include media-xl {
+		font-size: 1.78rem;
+		line-height: 2.89rem;
+	}
+}
+
+h3 {
+	font-size: 1.11rem;
+	font-weight: $bold;
+	line-height: 1.33rem;
+	margin-bottom: 0.4rem;
+}
+
+p {
+	font-size: 0.83rem;
+	line-height: 1.39rem;
+	color: $gray;
+
+	@include media-xl {
+		font-size: 1rem;
+		line-height: 1.56rem;
+	}
+}
+
+button {
+	font-family: inherit;
+}

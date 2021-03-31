@@ -1,0 +1,60 @@
+// ------------------------------------------------------------
+//  CARDS
+// ------------------------------------------------------------
+
+.cards {
+	@include flex-center-column;
+
+	@include media-xl {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+}
+
+.card {
+	@include flex-center-column;
+	padding: 1.3rem;
+	margin-bottom: 2.22rem;
+	border-radius: 0.83rem;
+	box-shadow: $box_shadow--heavy;
+	width: 15.56rem;
+
+	@include media-xl {
+		margin: 0.94rem;
+	}
+}
+
+.card2 {
+	@include media-xl {
+		margin-top: 4rem;
+	}
+}
+
+.card3 {
+	@include media-xl {
+		margin-top: 6.5rem;
+	}
+}
+
+.card__image {
+	width: 5.56rem;
+	margin: 1.3rem 0 1.78rem 0;
+}
+
+.card__heading {
+	margin-bottom: 0.4rem;
+}
+
+.card__text {
+	margin-bottom: 1.8rem;
+}
+
+.card__background {
+	background: url('/src/assets/static/content/bg-dots.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 0.22rem;
+	margin-bottom: 1.3rem;
+}

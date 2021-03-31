@@ -1,0 +1,85 @@
+// ------------------------------------------------------------
+//  FORMS
+// ------------------------------------------------------------
+
+.contact-form {
+	@include flex-center-column;
+	justify-content: space-between;
+
+	@include media-xl {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.contact-form__input-container {
+	width: 100%;
+	margin-bottom: 0.89rem;
+	border-radius: 5px;
+
+	&.invalid {
+		background: $red;
+	}
+
+	@include media-xl {
+		width: 16.67rem;
+		margin-bottom: 4.11rem;
+	}
+}
+
+.contact-form__input {
+	position: relative;
+	height: 2.67rem;
+	width: 100%;
+	font-family: inherit;
+	font-size: 0.78rem;
+	padding-left: 1.11rem;
+	outline: none;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	color: $dark_blue;
+
+	&::placeholder {
+		font-family: inherit;
+		font-size: 0.78rem;
+		color: rgba(36, 42, 69, 0.25);
+	}
+
+	&:invalid {
+		border: 2px solid $red;
+		background: url('/src/assets/static/icons/icon-error.svg');
+		background-color: $white;
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position: right 0.98rem center;
+	}
+
+	@include media-xl {
+		width: 16.67rem;
+	}
+}
+
+.contact-form__error-message {
+	@include flex-center-column;
+	align-items: flex-start;
+	padding: 0.44rem 0 0.44rem 0.67rem;
+	font-size: 0.56rem;
+	font-style: italic;
+	font-weight: $bold;
+	color: $white;
+	background: $red;
+	border-radius: 0 0 5px 5px;
+	display: none;
+}
+
+.button--contact {
+	width: 100%;
+	margin-bottom: 3.33rem;
+
+	@include media-xl {
+		width: 7rem;
+		margin: 0;
+		align-self: flex-start;
+	}
+}

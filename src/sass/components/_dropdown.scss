@@ -1,0 +1,58 @@
+// ------------------------------------------------------------
+//  DROPDOWN
+// ------------------------------------------------------------
+
+.dropdown {
+	text-align: left;
+
+	&:last-child {
+		margin-bottom: 2.67rem;
+	}
+}
+
+.dropdown__control {
+	position: relative;
+	width: 100%;
+	padding: 1.2rem 0;
+	font-size: 0.83rem;
+	text-align: left;
+	color: $dark_blue;
+	transition: $transition_ease-out;
+	cursor: pointer;
+
+	&:hover {
+		color: $red;
+		cursor: pointer;
+	}
+
+	&::after {
+		position: absolute;
+		content: url('/src/assets/static/icons/icon-arrow.svg');
+		right: 0;
+		width: 0.89rem;
+		height: 0.89rem;
+		vertical-align: middle;
+	}
+
+	&.active:after {
+		position: absolute;
+		content: url('/src/assets/static/icons/icon-arrow.svg');
+		right: 0;
+		width: 0.89rem;
+		height: 0.89rem;
+		transform: rotate(180deg);
+		vertical-align: middle;
+		filter: invert(50%) sepia(99%) saturate(1802%) hue-rotate(323deg) brightness(94%) contrast(109%);
+	}
+}
+
+.dropdown__content {
+	overflow: hidden;
+	max-height: 0;
+	border-bottom: 1px solid hsla(229, 31%, 21%, 0.15);
+	transition: $transition_ease-out;
+}
+
+.dropdown__text {
+	padding: 0.4rem 0 1.56rem 0;
+}
